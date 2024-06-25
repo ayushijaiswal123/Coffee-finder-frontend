@@ -25,7 +25,7 @@ const Main = () => {
   }, [query]);
   
   const getCafes = async() => {
-    const response = await fetch(`http://coffee-finder-backend.vercel.app/cafes/${query}`);
+    const response = await fetch(`https://coffee-finder-backend.vercel.app/cafes/${query}`);
     const data = await response.json();
      setCafes(data);
   };

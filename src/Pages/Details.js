@@ -14,7 +14,7 @@ const CafeDetails = () => {
     },[]);
 
     const getCafes = async () => {
-        const response = await fetch(`http://coffee-finder-backend.vercel.app/cafes/${location}`,{mode: 'cors',method: 'GET'});
+        const response = await fetch(`https://coffee-finder-backend.vercel.app/cafes/${location}`,{mode: 'cors',method: 'GET'});
         const data = await response.json();
         const cafe = data.find(cafe => cafe.position == id);
         setSelectedCafe(cafe);
